@@ -1,0 +1,137 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    transition: .4s;
+}
+
+body button.mode {
+    position: absolute;
+    top: 20%;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .5s;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+li {
+    list-style: none;
+    margin: 15px;
+}
+
+li button {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: .4s;
+}
+
+/* Light Mode */
+
+body.light {
+    background: #f2f3f7;
+}
+
+body.light button.mode {
+    background: #5c5b5b;
+    color: #fff;
+    text-shadow: #3e3e3e;
+}
+
+body.light ul {
+    box-shadow: -2px -2px 5px #fff,
+                3px 3px 5px rgba(0, 0, 0, .07);
+}
+
+body.light li button {
+    background: inherit;
+    color: #6a9bd8;
+    box-shadow: -2px -2px 5px #fff,
+                3px 3px 5px rgba(0, 0, 0, .07);
+}
+
+body.light li button.active {
+    box-shadow: inset -2px -2px 5px #fff,
+                inset 3px 3px 5px rgba(0, 0, 0, .07);
+    color: rgb(222, 224, 66);
+    
+}
+
+/* Dark Mode */
+
+body.dark {
+    background: #222;
+}
+
+body.dark button.mode {
+    background: #f2f3f7;
+    color: #6a9bd8;
+}
+
+
+body.dark ul {
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, .5),
+                3px 3px 5px rgba(241, 239, 239, 0.07);
+}
+
+body.dark li button {
+    background: inherit;
+    color: #3e3e3e;
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, .5),
+                3px 3px 5px rgba(255, 255, 255, .07);
+}
+
+body.dark li button.active {
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, .5),
+                inset 3px 3px 5px rgba(255, 255, 255, .07);
+                color: #fff;
+                text-shadow: 0 0 10px,
+                             0 0 20px #219cf3;
+}
+
+/* body.dark ul {
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, .5),
+                inset 3px 3px 5px rgba(241, 239, 239, 0.07);
+}
+
+body.dark li button {
+    background: inherit;
+    color: #3e3e3e;
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, .5),
+                inset 3px 3px 5px rgba(255, 255, 255, .07);
+}
+
+body.dark li button.active {
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, .5),
+                3px 3px 5px rgba(255, 255, 255, .07);
+    color: #fff;
+    text-shadow: 0 0 10px,
+                 0 0 20px #219cf3;
+} */

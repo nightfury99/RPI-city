@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Using the XMLHttpRequest Object</h2>
+
+<div id="demo">
+<button type="button" onclick="loadXMLDoc()">Change Content</button>
+</div>
+
+<script>
+var value = false;
+
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      
+    }
+  };
+	if(value == false){
+		value = true;
+		xhttp.open("POST", "on.php", true);
+		xhttp.send();
+	}else{
+		value = false;
+		xhttp.open("POST", "off.php", true);
+		xhttp.send();
+	}
+	console.log(value);
+}
+</script>
+
+</body>
+</html>

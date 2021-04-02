@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED CONTROL</title>
+    <script src="https://kit.fontawesome.com/88fcd875f3.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="light">
+    <button class="mode">Dark</button>
+    <ul>
+        <li>
+            <button class="">
+                <i class="far fa-lightbulb"></i>
+            </button>
+        </li>
+        <li>
+            <button class="">
+                <i class="fas fa-subway"></i>
+            </button>
+        </li>
+    </ul>
+
+    <script>
+        console.log("dsadsadasd");
+        const mode = document.querySelector('.mode');
+        let body = {
+            'el': document.querySelector('body'),
+            'dark': false
+        }
+
+        mode.addEventListener('click', ()=> {
+            if(body.dark === false) {
+                body.dark = true;
+                body.el.className = 'dark';
+                mode.textContent = 'light';
+            }
+            else {
+                body.dark = false;
+                body.el.className = 'light';
+                mode.textContent = 'dark';
+            }
+        });
+        const btns = document.querySelectorAll('li > button');
+        btns.forEach(btn =>{
+            btn.addEventListener('click', ()=>{
+                btn.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
